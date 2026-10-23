@@ -37,6 +37,7 @@ test.afterEach(async ({ page }) => {
     // await page.close(); // no need to close the page as Playwright does it automatically
 })
 
+test.describe('Hooks Test Suite', () => {
     test('test1', async ({ page }) => {
 
         //login
@@ -69,6 +70,7 @@ test.afterEach(async ({ page }) => {
         //logout
 
     });
+});
 
 
         //npx playwright test tests/hooks.spec.ts

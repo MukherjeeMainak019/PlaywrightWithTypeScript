@@ -2,7 +2,7 @@ import{test} from '@playwright/test';
 
 
 test.beforeEach(async({page})=>{    
-    console.log('Hello World');
+    console.log('Before each :Hello World');
     
 });
 
@@ -11,11 +11,11 @@ test('Where is my candy',async({page})=>{
 });
 
 test('I am alive',async({page})=>{
-    console.log('I am alive!');
+    console.log('Test case:I am alive!');
 });
 
 test.afterEach(async({page})=>{    
-    console.log('Hello World');
+    console.log('After each :Hello World');
     
 });
 

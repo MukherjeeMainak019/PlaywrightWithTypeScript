@@ -14,7 +14,8 @@ test("title of the test", () => {
 test('getTitle of the page', async ({page}) => {
 
     await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
-    var text = await page.title();
+    var text =  await page.title();
+    await page.pause();
     console.log(text);
     await expect(page).toHaveTitle('Practice Page');
 });

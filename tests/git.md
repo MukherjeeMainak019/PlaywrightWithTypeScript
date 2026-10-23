@@ -126,3 +126,12 @@ git push --force
 git push --force-with-lease
 
 
+Daily developer cheatsheet
+git checkout main
+git pull
+git checkout -b feature/new-work
+# make changes
+git add .
+git commit -m "Describe work"
+git push -u origin feature/new-work
+# open PR → merge

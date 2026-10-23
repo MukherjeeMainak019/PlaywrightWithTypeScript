@@ -17,6 +17,7 @@ import { test as base } from '@playwright/test';
 
 type MyFixtures = { 
     helloWorld: void;
+
     //define your user defined fixtures here
 };
 
@@ -26,14 +27,15 @@ type MyFixtures = {
     helloWorld: async ({}, use) => {
 
         //anything that we put before use() will be executed before each test
-        console.log('Before executing test');
+        console.log('Before executing test, before use()');
 
         await use();
 
         
         //anything that we put after use() will be executed after each test
-        console.log('After executing test');
+        console.log('After executing test, after use()');
     },
+
 });
 
 

@@ -12,12 +12,12 @@
 
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test.only('test', async ({ page }) => {
   await page.goto('https://demoblaze.com/');
   await page.getByRole('link', { name: 'Log in' }).click();
   await page.locator('#loginusername').click();
-  await page.locator('#loginusername').fill('someusername');
-  await page.locator('#loginusername').press('Tab');
+  await page.locator('#loginusername').fill('someuserpassword');
+  await page.locator('#loginpassword').press('Tab');
   await page.locator('#loginpassword').fill('someuserpassword');
   page.once('dialog', dialog => {
     console.log(`Dialog message: ${dialog.message()}`);

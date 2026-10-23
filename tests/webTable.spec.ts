@@ -62,7 +62,7 @@ for (let row of allRowData.slice(1)) {
 
 });
 
-test('Dynamic web table', async ({ page }) => {
+test.only('Dynamic web table', async ({ page }) => {
 
   await page.goto('https://practice.expandtesting.com/dynamic-table');
 
@@ -72,6 +72,7 @@ test('Dynamic web table', async ({ page }) => {
     //capture all the rows
     const rows : Locator[] = await table.locator("tr").all();
     console.log(`Total number of rows: ${rows.length}`);
+    console.log(rows);
     
     for(const row of rows){
         const processName = await row.locator("td").nth(0).innerText(); // nth(0) because process name is in first colomn

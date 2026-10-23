@@ -2,7 +2,7 @@ import{test} from './fixture'
 
 
 test('Where is my candy',async({helloWorld})=>{
-    console.log('Finding candy...');
+    console.log('Test case: Finding candy...');
 
 });
 
